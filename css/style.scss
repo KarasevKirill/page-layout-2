@@ -1,0 +1,212 @@
+$mainFont: 'Montserrat', sans-serif;
+$additionalFont: 'Roboto', sans-serif;
+$pageWidth: 1170px;
+$fwNormal: 400;
+$fwBold: 700;
+
+$bgColor: #EAEAEA;
+$fcDarkGray: #494949;
+$fcLightGray: #959595;
+$fcBlack: #282828;
+$fcWhite: #FFFFFF;
+$colorMenuActive: #EE252D;
+
+@mixin linkMenu {
+    a {
+        color: $fcDarkGray;
+        text-decoration: none;
+    }
+}
+
+@mixin progressTitleDecoration {
+    content: '';
+    position: absolute;
+    background-image: url(../img/item.png);
+    display: block;
+    width: 102px;
+    height: 28px;
+    top: calc(50% - 14px);
+}
+
+@mixin menuSeparators {
+    &::before {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 100%;
+        background-color: $fcDarkGray;
+        position: absolute;
+        left: 0;
+    }
+
+    &:first-child {
+        padding-left: 0;
+        margin-left: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+body {
+    background-color: $bgColor;
+    font-family: $mainFont;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.navigation-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+
+.wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: $pageWidth;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navigation {
+    display: flex;
+    font-weight: $fwBold;
+    text-transform: uppercase;
+    
+    li {
+        @include linkMenu;
+        @include menuSeparators;
+
+        padding-left: 23px;
+        margin-left: 22px;
+        position: relative;      
+    }
+}
+
+.banner {
+    background-image: url(../img/banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: $fcWhite;
+    padding-top: 260px;
+    padding-bottom: 280px;
+}
+
+.pizza-image {
+    position: absolute;
+    right: 0;
+    top: -200px;
+}
+
+.title-banner {
+    font-size: 50px;  
+    margin-bottom: 23px;
+}
+
+.description {
+    font-size: 25px;
+    line-height: 30px;
+    max-width: 570px;
+    font-family: $additionalFont;
+    margin-bottom: 24px;
+}
+
+.btn {
+    display: block;
+    color: $fcWhite;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: $fwBold;
+    border: 2px solid $fcWhite;
+    padding: 16px 0;
+    max-width: 190px;
+    text-align: center;
+}
+
+.title-progress {
+    font-size: 45px;
+    color: $fcBlack;
+    text-transform: uppercase;
+    font-weight: $fwBold;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding-right: 127px;
+    padding-left: 127px;
+    margin-bottom: 20px;
+
+    &::before {
+        @include progressTitleDecoration;
+
+        left: 0;
+    }
+
+    &::after {
+        @include progressTitleDecoration;
+
+        right: 0;
+    }
+}
+
+.progress-center {
+    text-align: center;
+
+    p {
+        color: $fcLightGray;
+        font-size: 20px;
+        font-family: $additionalFont;
+        margin: 0;
+    }
+}
+
+.menu {
+    @include linkMenu;
+
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+
+    li {
+        @include menuSeparators;
+
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
+
+        a {
+            text-transform: uppercase;
+            font-weight: $fwBold;
+            font-size: 18px;
+            padding-bottom: 18px;
+
+            &.active {
+                border-bottom: 4px solid $colorMenuActive;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    bottom: 0;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border: 7px solid transparent;
+                    border-bottom: 7px solid $colorMenuActive;
+                }
+            }
+        }    
+    }
+}
+
