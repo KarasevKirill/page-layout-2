@@ -329,4 +329,157 @@ footer {
     font-family: $additionalFont;
     text-align: center;
 }
+
+@media (max-width: 1100px) {
+    .wrapper {
+        max-width: 800px;
+    }
+
+    .pizza-image {
+        display: none;
+    }
+
+    .banner {
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+
+    .progress {
+        padding-top: 40px;
+    }
+
+    .title-progress {
+        font-size: 30px;
+    }
+
+    .menu {
+        li {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    .instruction {
+        flex-direction: column;
+    }
+
+    .instruction-item {
+        padding: 0 55px 10px 55px;
+
+        &:last-child {
+            .instruction-text {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .instruction-text {
+        border-right: none;
+        border-bottom: 1px solid $bgColor;
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .navigation {      
+        li {
+            padding-left: 10px;
+            margin-left: 10px;   
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .title-progress {
+        &::before {
+            display: none;
+        }
+    
+        &::after {
+            display: none;
+        }
+    }
+
+    .menu {
+        li {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    .navigation-container {
+        flex-direction: column;
+    }
+
+    .navigation {
+        margin-top: 50px;
+    }
+
+    .btn-center {
+        .btn-create {
+            font-size: 20px;
+            background-size: contain;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .banner {
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    
+    .title-banner {
+        font-size: 30px;
+    }
+
+    footer {
+        padding: 15px 0;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .instruction-text {
+
+        h3 {
+            font-size: 30px;
+        }
+    }
+
+    .menu {
+        align-content: stretch;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        li {
+            text-align: center;
+            width: 45%;
+            padding: 20px 0;
+            background-color: $fcWhite;
+            margin-top: 10px;
+
+            &::before {
+                display: none;
+            }
+
+            a {        
+                font-size: 16px;       
+            }
+        }
+    }
+
+    .title-progress {
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    footer {
+        font-size: 15px;
+    }
+}
+
   
