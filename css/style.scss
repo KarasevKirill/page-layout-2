@@ -63,8 +63,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 35px;
-    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-bottom: 35px;
 }
 
 .wrapper {
@@ -84,8 +84,8 @@ ul {
         @include linkMenu;
         @include menuSeparators;
 
-        padding-left: 23px;
-        margin-left: 22px;
+        padding-left: 25px;
+        margin-left: 25px;
         position: relative;      
     }
 }
@@ -96,7 +96,7 @@ ul {
     background-size: cover;
     background-position: center center;
     color: $fcWhite;
-    padding-top: 260px;
+    padding-top: 215px;
     padding-bottom: 280px;
 }
 
@@ -108,7 +108,7 @@ ul {
 
 .title-banner {
     font-size: 50px;  
-    margin-bottom: 23px;
+    margin-bottom: 12px;
 }
 
 .description {
@@ -117,6 +117,7 @@ ul {
     max-width: 570px;
     font-family: $additionalFont;
     margin-bottom: 24px;
+    margin-top: 0;
 }
 
 .btn {
@@ -127,7 +128,7 @@ ul {
     text-transform: uppercase;
     font-weight: $fwBold;
     border: 2px solid $fcWhite;
-    padding: 16px 0;
+    padding: 12px 0;
     max-width: 190px;
     text-align: center;
 }
@@ -142,7 +143,7 @@ ul {
     display: inline-block;
     padding-right: 127px;
     padding-left: 127px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     &::before {
         @include progressTitleDecoration;
@@ -174,6 +175,7 @@ ul {
     display: flex;
     justify-content: center;
     margin-top: 42px;
+    margin-bottom: 65px;
 
     li {
         @include menuSeparators;
@@ -210,3 +212,121 @@ ul {
     }
 }
 
+.instruction {
+    display: flex;
+    justify-content: space-between;
+    background-color: $fcWhite;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.11);
+    margin-bottom: 85px;
+}
+
+.number {
+    font-family: $additionalFont;
+    font-size: 120px;
+    font-weight: $fwBold;
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: $fcBlack;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+}
+
+.number-1 {
+    &::after {
+        background-image: url(../img/icon-1.png);
+        width: 126px;
+        height: 71px;
+        left: 69px;
+        top: calc(50% - 35px);
+    }
+}
+
+.number-2 {
+    &::after {
+        background-image: url(../img/icon-2.png);
+        width: 184px;
+        height: 81px;
+        left: 88px;
+        top: calc(50% - 40px);
+    }
+}
+
+.number-3 {
+    &::after {
+        background-image: url(../img/icon-3.png);
+        width: 142px;
+        height: 68px;
+        left: 95px;
+        top: calc(50% - 34px);
+    }
+}
+
+.instruction-text {
+    border-right: 1px solid $bgColor;
+    padding-right: 55px;
+
+    h3 {
+        font-size: 45px;
+        color: $fcBlack;
+        margin-bottom: 10px;
+        margin-top: 18px;
+    }
+
+    p {
+        font-family: $additionalFont;
+        font-size: 17px;
+        color: $fcBlack;
+        line-height: 24px;
+        margin-top: 0;
+    }
+}
+
+.instruction-item {
+    padding: 50px 0 58px 55px;
+    box-sizing: content-box;
+
+    &:last-child {
+        .instruction-text {
+            border-right: none;
+        }
+    }
+}
+
+.btn-center {
+    text-align: center;
+
+    .btn-create {
+        color: $fcWhite;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: $fwBold;
+        background-image: url(../img/btn-bg.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 30px 55px;
+    }
+}
+
+.progress {
+    padding-top: 80px;
+    padding-bottom: 94px;
+}
+
+footer {
+    background-image: url(../img/footer-bg.png);
+    background-size: cover;
+    padding: 30px 0;
+    margin-top: 20px;
+    color: $fcWhite;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: $additionalFont;
+    text-align: center;
+}
+  
